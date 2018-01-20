@@ -10,11 +10,16 @@
  */
 
 var num = 99;
-
+var bottlesSongText;
 while (num >= 0/* your stop condition goes here */) {
     // check value of num
-    // print lyrics using num
-    // don't forget to check pluralization on the last line!
+      if(num <= 99 && num >= 0 && num !== 1){
+        // print lyrics using num
+        bottlesSongText = num + " Bottles of Juice";
+        // don't forget to check pluralization on the last line!
+      }else
+      bottlesSongText = num + " Bottle of Juice";
+      console.log(bottlesSongText);
     // decrement num
-    num = x - 1;
+    num = num - 1;
 }
