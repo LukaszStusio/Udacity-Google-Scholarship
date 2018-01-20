@@ -11,14 +11,20 @@
 
 var num = 99;
 var bottlesSongText;
-while (num >= 0/* your stop condition goes here */) {
+var esEnding;
+while (num >= 1/* your stop condition goes here */) {
     // check value of num
-      if(num <= 99 && num >= 0 && num !== 1){
+      if(num <= 99 && num > 0 && num !== 1){
         // print lyrics using num
-        bottlesSongText = num + " Bottles of Juice";
+        if(num - 1 === 1){
+          esEnding = "bottle";
+        }else {
+          esEnding = "bottles";
+        }
+        bottlesSongText = num + " bottles of juice on the wall! " + num + " bottles of juice! Take one down, pass it around... " + (num - 1) + " " + esEnding + " of juice on the wall!";
         // don't forget to check pluralization on the last line!
       }else
-      bottlesSongText = num + " Bottle of Juice";
+      bottlesSongText = num + " bottle of juice on the wall! " + num + " bottle of juice! Take one down, pass it around... " + (num - 1) + " bottles of juice on the wall!";
       console.log(bottlesSongText);
     // decrement num
     num = num - 1;
