@@ -30,9 +30,9 @@ const t0 = "Solid rocket booster ignition and liftoff!";
 while(time >= 0) {
   const countdown = "T-" + time + " seconds";
 
-  if (time <= 60 && time !== 50 && time !== 31 && time !== 16 && time !== 10 && time !== 6 && time !== 0) {
+
         task = countdown;
-  } else if (time === 50) {
+    if (time === 50) {
         task = t50;
   } else if (time === 31) {
         task = t31;
