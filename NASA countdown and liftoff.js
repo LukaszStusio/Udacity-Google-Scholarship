@@ -18,3 +18,34 @@
 // your code goes here
 
 var time = 60;
+var task;
+
+const t50 = "Orbiter transfers from ground to internal power";
+const t31 = "Ground launch sequencer is go for auto sequence start";
+const t16 = "Activate launch pad sound suppression system";
+const t10 = "Activate main engine hydrogen burnoff system";
+const t6 = "Main engine start";
+const t0 = "Solid rocket booster ignition and liftoff!";
+
+while(time >= 0) {
+  const countdown = "T-" + time + " seconds";
+
+  if (time <= 60 && time !== 50 && time !== 31 && time !== 16 && time !== 10 && time !== 6 && time !== 0) {
+        task = countdown;
+  } else if (time === 50) {
+        task = t50;
+  } else if (time === 31) {
+        task = t31;
+  } else if (time === 16) {
+        task = t16;
+  } else if (time === 10) {
+        task = t10;
+  } else if (time === 6) {
+        task = t6;
+  } else if (time === 0) {
+        task = t0;
+  }
+
+  console.log(task);
+  time = time - 1;
+}
